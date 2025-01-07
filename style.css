@@ -4,32 +4,148 @@
     box-sizing: border-box;
 
 }
+:root {
+    --mycolor: #b0e8e8;
+}
 
 body {
     font-family: 'Arial', sans-serif;
-    line-height: 0.7;
+    /* line-height: 0.2; */
+    font-size: 12px;
+
 }
 
 .container {
+    margin: 100px 100px ;
+   width: 333px;
    display: grid;
    grid-template-columns: repeat(3, 1fr);
-   margin: 10px;
-   
+   background: linear-gradient(
+        to right,
+        rgba(176, 232, 232, 1) 0%,     /* Blue at the start */
+        rgba(255, 255, 255, 0.5) 50%, /* White in the middle */
+        rgba(176, 232, 232, 1)    /* Blue again at the end */
+    );
+   border: 2px solid #a6cde3;
+   opacity: 0.7;
+   border-radius: 10px;
+   overflow: hidden;   
     
 }
 .headings {
-    background-color: aqua;
+    /* background-color: var(--mycolor); */
     grid-column: span 3;
-    margin: 5px;
+
 }
+
+.headings ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.headings ul li {
+    align-self: center;
+    list-style-type: none;
+}
+
+.aau-logo {
+  width: 50px;
+  height: 50px;
+  padding-left: 7px;
+  
+}
+.header-text {
+    font-size: 15px;
+    padding-left: 25px;
+}
+.amharic {
+    margin-left: 15px ;
+}
+.get-pic {
+    width: 80px;
+    height: 40px;
+    margin-right: 7px;
+}
+
+    /* the content part */
+
 .infromations {
-    background-color: bisque;
+    position: relative;
+    width: 333px;
+    margin-top: -10px;
+    margin-bottom: -8px;
+    background-image: url(aau-logo.png);
+    background-repeat: no-repeat;
+    background-position: 60% 40%;
+    background-size: 110px 110px;
 }
 
 .personal-data {
-         display: grid;
-         grid-
+    position: relative;
+    display: flex;
+    /* z-index: 1; */
+
+         /* display: grid; */
+         /* grid-template-columns: repeat(3, 1fr); */
+         margin: 10px;
+         gap: 15px;
+         position: relative;
 }
-ul li {
+
+.col-1 li {
+    margin-left: 10px;
+}
+.personal-data  li {
     list-style-type: none;
+    white-space: nowrap;
+
+}
+
+.personal-data > ul li:not(:last-child){
+    padding: 2px;
+
+}
+.personal-data > ul li:first-child {
+    padding-top: 0px;
+    margin-top: -6px;
+}
+.valid {
+    padding-left: 15px;
+}
+.purpose {
+    margin-left: 80px;
+    color: rgb(186, 21, 21);
+    font-weight: 600;
+}
+.name {
+    grid-column: span 2;
+
+}
+.self-picture  {
+    object-fit: cover;
+    align-self: end;
+    width: 70px;
+    height: 90px;
+    padding-bottom: 2px;
+    filter: grayscale(70%);
+    filter: brightness(70%);
+    opacity: 0.5;
+}
+
+.picture-container{
+    position: absolute;
+    left: 240px;
+    top: 15px;
+ width: 100px;
+ height: auto;
+ font-size: 12px;
+ 
+ 
+}
+.colon{
+    font-weight: 550;
+}
+.ugr {
+    padding-left: 6px;
+    font-size: 10.6px;
 }
